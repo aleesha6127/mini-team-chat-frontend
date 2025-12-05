@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+  color: white;
+  min-height: 100vh;
+}
+
+:root {
+  --primary: #1a73e8;
+  --primary-dark: #1559b4;
+  --card-bg: rgba(0,0,0,0.6);
+  --input-bg: #2c2c2c;
+  --border: #444;
+  --error: #ff6b6b;
+  --success: #00c853;
+}
+
+.auth-card {
+  padding: 20px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background-color: var(--input-bg);
+  color: #fff;
+  outline: none;
+}
+.input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(26,115,232,0.25);
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.error-text {
+  color: var(--error);
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+.success-text {
+  color: var(--success);
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+/* Channels list */
+.channel-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  background-color: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+/* Message bubbles */
+.message-bubble {
+  max-width: 60%;
+  padding: 8px 10px;
+  border-radius: 12px;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+.message-me {
+  background-color: rgba(26,115,232,0.2);
+  border: 1px solid rgba(26,115,232,0.5);
+  align-self: flex-end;
+}
+.message-other {
+  background-color: rgba(255,255,255,0.08);
+  border: 1px solid var(--border);
+  align-self: flex-start;
+}
+.link-btn {
+  background: none;
+  border: none;
+  color: var(--accent-color, #4ea6ff);
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  font-size: inherit;
+}
+.icon-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted, #9aa4ad);
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+}
+.input-password-wrapper {
+  position: relative;
+}
+.input-password-wrapper .icon-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
